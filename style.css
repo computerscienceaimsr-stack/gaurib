@@ -1,0 +1,336 @@
+/* ===========================
+   Google Font
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff8fb;
+    color:#444;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 10%;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(12px);
+    box-shadow:0 5px 20px rgba(255,182,193,.2);
+    z-index:1000;
+}
+
+.logo{
+    color:#ff7da7;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff7da7;
+}
+
+/* ===========================
+ Hero
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 10%;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h3{
+    font-size:22px;
+    color:#ff9eb8;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:#ff5f8a;
+    margin:15px 0;
+}
+
+.hero-text h2{
+    font-size:28px;
+    color:#666;
+}
+
+.hero-text p{
+    margin:25px 0;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff7da7;
+    color:white;
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#ff5f8a;
+    transform:translateY(-4px);
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:330px;
+    height:330px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #ffd4e2;
+    box-shadow:0 20px 40px rgba(255,105,180,.2);
+}
+
+/* ===========================
+ Sections
+=========================== */
+
+section{
+    padding:100px 10%;
+}
+
+.heading{
+    text-align:center;
+    color:#ff6d97;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+/* ===========================
+ About
+=========================== */
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(255,182,193,.25);
+    line-height:2;
+}
+
+/* ===========================
+ Skills
+=========================== */
+
+.skill-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill-box span{
+    background:#ffe7ef;
+    color:#ff5f8a;
+    padding:15px 28px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skill-box span:hover{
+    background:#ff7da7;
+    color:white;
+    transform:scale(1.08);
+}
+
+/* ===========================
+ Projects
+=========================== */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(255,182,193,.25);
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:#ff6d97;
+    margin-bottom:15px;
+}
+
+/* ===========================
+ Contact
+=========================== */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:650px;
+    margin:auto;
+}
+
+input,
+textarea{
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 8px 20px rgba(255,182,193,.25);
+}
+
+button{
+    border:none;
+    background:#ff7da7;
+    color:white;
+    padding:18px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff5f8a;
+}
+
+/* ===========================
+ Footer
+=========================== */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#ffd9e7;
+    color:#555;
+}
+
+/* ===========================
+ Scroll Animation
+=========================== */
+
+.hero-text,
+.hero-image,
+.card,
+.skill-box,
+.project-card,
+form{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+ Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:45px;
+
+}
+
+.hero-image img{
+
+width:260px;
+
+height:260px;
+
+}
+
+nav{
+
+padding:15px 6%;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.heading{
+
+font-size:34px;
+
+}
+
+}
